@@ -12,8 +12,7 @@ def main() -> None:
     parser.add_argument('-u', '--url',type=str,required=True,help='URL to test')
     args = parser.parse_args()
     url = args.url
-    cookies = args.cookies
-
+    
     endpoint = Endpoint(url, cookies)
     if endpoint.checkUrl() and endpoint.makeRequest():
         log.info(f'URL provided {endpoint.url} is Valid!')

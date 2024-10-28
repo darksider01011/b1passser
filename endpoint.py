@@ -51,12 +51,8 @@ class Endpoint:
             raise('Method getCname Error')
 
     def checkUrl(self) -> str:
-        if self._url[-1] == '/':
-            return False
-        if re.match(r'(http|https):\/\/.*\..*', self._url):
             return True
-        else:
-            return False
+        
 
     def makeRequest(self, url: str = None, method: str = 'GET', headers: dict = None, timeout: int = None, protocolVersion: str = 'HTTP/1.1') -> bool:
         try:

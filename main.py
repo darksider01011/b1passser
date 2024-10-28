@@ -13,7 +13,7 @@ def main() -> None:
     args = parser.parse_args()
     url = args.url
     
-    endpoint = Endpoint(url, cookies)
+    endpoint = Endpoint(url)
     if endpoint.checkUrl() and endpoint.makeRequest():
         log.info(f'URL provided {endpoint.url} is Valid!')
         bypass = Bypass(endpoint)

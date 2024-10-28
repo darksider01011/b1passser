@@ -9,15 +9,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description='403 and 401 Bypasser based on Known Techniques',
         formatter_class=lambda prog: argparse.HelpFormatter(prog, max_help_position=40))
-    parser.add_argument('-u', '--url',
-                        type=str,
-                        required=True,
-                        help='URL to test')
-    parser.add_argument('-c', '--cookies',
-                        type=str,
-                        required=False,
-                        default=None,
-                        help='Session Cookies')
+    parser.add_argument('-u', '--url',type=str,required=True,help='URL to test')
     args = parser.parse_args()
     url = args.url
     cookies = args.cookies
